@@ -11,10 +11,10 @@ $curl= curl_init();
 //13.032809,80.210392
 //13.032809,80.210392
 
-//echo 'https://maps.googleapis.com/maps/api/geocode/json?latlng='.$latlong.'&sensor=false&key=AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw';
+//echo 'https://maps.googleapis.com/maps/api/geocode/json?latlng='.$latlong.'&sensor=false&key=YOUR_GOOGLE_MAPS_API_KEY';
 
-//echo 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='.$latlong.'&radius=500&type='.$type.'&key=AIzaSyCeUrl7gFCnSwD5BXd0dcyFSRGCWjtmYEM';
-  curl_setopt($curl, CURLOPT_URL, 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='.$latlong.'&radius=500&type='.$type.'&key=AIzaSyCeUrl7gFCnSwD5BXd0dcyFSRGCWjtmYEM');
+//echo 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='.$latlong.'&radius=500&type='.$type.'&key=YOUR_GOOGLE_MAPS_API_KEY';
+  curl_setopt($curl, CURLOPT_URL, 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='.$latlong.'&radius=500&type='.$type.'&key=YOUR_GOOGLE_MAPS_API_KEY');
   // Make it so the data coming back is put into a string
   curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
   // Insert the data
@@ -68,12 +68,12 @@ $mail->IsSMTP(); // enable SMTP
 $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
 $mail->SMTPAuth = true; // authentication enabled
 $mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
-$mail->Host = "sg2plcpnl0078.prod.sin2.secureserver.net";
+$mail->Host = "YOUR_SMTP_HOST";
 $mail->Port = 465; // or 587
 $mail->IsHTML(true);
-$mail->Username = "info@iotclouds.in";
-$mail->Password = "welcome@123";
-$mail->SetFrom("info@iotclouds.in");
+$mail->Username = "YOUR_EMAIL_ADDRESS";
+$mail->Password = "YOUR_EMAIL_APP_PASSWORD";
+$mail->SetFrom("YOUR_EMAIL_ADDRESS");
 $mail->Subject = "EMERGENCY";
 
 foreach($email as $val){
@@ -111,7 +111,7 @@ $curl= curl_init();
 //13.032809,80.210392
 //13.032809,80.210392
 
-  curl_setopt($curl, CURLOPT_URL, 'https://maps.googleapis.com/maps/api/geocode/json?latlng='.$latlong.'&sensor=false&key=AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw');
+  curl_setopt($curl, CURLOPT_URL, 'https://maps.googleapis.com/maps/api/geocode/json?latlng='.$latlong.'&sensor=false&key=YOUR_GOOGLE_MAPS_API_KEY');
   curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
   $result = curl_exec($curl);

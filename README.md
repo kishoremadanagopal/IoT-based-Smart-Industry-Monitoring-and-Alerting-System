@@ -49,11 +49,7 @@ This project addresses that gap with an IoT-based system that:
 |--------|---------------|
 | `arduino CODE/` | Embedded firmware: sensor reading loop, threshold checks, and HTTP transmission logic |
 | `web page codes/` | The full web dashboard — PHP backend, CSS/SCSS styling, JavaScript for live updates |
-| `Review - 1/` | Phase 1 deliverable — problem identification, literature survey, proposed architecture |
-| `Review - 2/` | Phase 2 deliverable — design specification, hardware/software selection, prototype work |
-| `Review - 3/` | Phase 3 deliverable — implementation, testing results, and final integration |
-| `Project Report Book with Plagiarism Report/` | The final thesis document submitted to the university, with plagiarism check |
-| `Final Viva Presentation PPT/` | Slide deck presented at the final viva voce examination |
+| `Project Report/` | The final project report submitted to the university |
 | `Paper and Publication Details/` | Research paper drafted from this work and publication-related artifacts |
 
 ## How it works
@@ -69,13 +65,13 @@ This project addresses that gap with an IoT-based system that:
 ### Hardware
 1. Wire the sensors to the Arduino following the pin assignments documented inside `arduino CODE/`.
 2. Open the Arduino sketch in the Arduino IDE.
-3. Update the Wi-Fi credentials and the URL of your PHP server endpoint.
+3. In `arduino CODE/node_mcu_code/node_mcu_code.ino`, replace the placeholders `YOUR_WIFI_NAME`, `YOUR_WIFI_PASSWORD`, `YOUR-PROJECT-ID` and `YOUR_FIREBASE_DATABASE_SECRET` with your own values. Never commit real credentials.
 4. Upload the sketch to the board.
 
 ### Web dashboard
 1. Copy the contents of `web page codes/` to your PHP-capable web host (XAMPP, WAMP, or any LAMP server works).
-2. Update database connection parameters in the configuration file.
-3. Run the included SQL schema to create the sensor-reading tables.
+2. Fill in the placeholders: the Firebase URL in `firebase.php`, `on.php` and `off.php`, and the Google Maps API key and email (SMTP) settings in `at.php`.
+3. Open `setup.php` once to create the SQLite database (`meter.db`) with the sensor-reading and user tables.
 4. Open the dashboard URL in a browser. As soon as the Arduino starts transmitting, readings appear live.
 
 ## Key features

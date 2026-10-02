@@ -1,6 +1,6 @@
 <?php
 require 'util.php';
-$FIREBASE = "https://project-2d302-default-rtdb.firebaseio.com/";
+$FIREBASE = "https://YOUR-PROJECT-ID.firebaseio.com/";
 $NODE_DELETE = "artists.json";
 $NODE_GET = "artists.json";
 $NODE_PATCH = ".json";

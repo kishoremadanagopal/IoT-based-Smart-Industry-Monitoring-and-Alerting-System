@@ -1,8 +1,8 @@
 #include "FirebaseESP8266.h"
-#define FIREBASE_HOST "project-2d302-default-rtdb.firebaseio.com"
-#define FIREBASE_AUTH "l7JKN1pLueHMmf74eE9znD6UMdyBFSZ0bvrca7L6"
-#define WIFI_SSID "iotkit"
-#define WIFI_PASSWORD "123456789"
+#define FIREBASE_HOST "YOUR-PROJECT-ID.firebaseio.com"
+#define FIREBASE_AUTH "YOUR_FIREBASE_DATABASE_SECRET"
+#define WIFI_SSID "YOUR_WIFI_NAME"
+#define WIFI_PASSWORD "YOUR_WIFI_PASSWORD"
 #define relay1 5
 //#define relay2 9
 

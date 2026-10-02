@@ -1,0 +1,12 @@
+# Local database (created by setup.php; may contain personal data)
+web page codes/meter.db
+*.db
+
+# Secrets
+.env
+
+# OS and editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
